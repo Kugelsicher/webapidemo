@@ -12,7 +12,7 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
-  solution: 'forecast/forecast.csproj'
+  solution: 'CineAPI/CineAPI.csproj'
 
 steps:
 - task: UseDotNet@2
