@@ -12,7 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 
-namespace forecast
+namespace CineAPI
 {
     public class Startup
     {
@@ -20,7 +20,7 @@ namespace forecast
         {
             Configuration = configuration;
         }
-        
+
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -30,7 +30,7 @@ namespace forecast
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "forecast", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "CineAPI", Version = "v1" });
             });
         }
 
@@ -41,7 +41,7 @@ namespace forecast
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "forecast v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "CineAPI v1"));
             }
 
             app.UseHttpsRedirection();

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace forecast.Controllers
+namespace CineAPI.Controllers
 {
     [ApiController]
     [Route("[controller]")]

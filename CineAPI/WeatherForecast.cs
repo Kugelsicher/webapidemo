@@ -1,6 +1,6 @@
 using System;
 
-namespace forecast
+namespace CineAPI
 {
     public class WeatherForecast
     {
