@@ -12,7 +12,7 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
-  solution: 'CineAPI/CineAPI.csproj'
+  solution: 'cine.sln'
 
 steps:
 - task: UseDotNet@2
