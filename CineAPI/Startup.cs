@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BusinessLogic;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -35,6 +36,8 @@ namespace CineAPI
             services.AddDbContext<Cinephiliacs_DbContext>(
                 options => options.UseSqlServer(myConnectionString)
             );
+
+            services.AddScoped<BusinessLogic.Interfaces.IUserLogic, UserLogic>();
 
             services.AddSwaggerGen(c =>
             {
