@@ -24,5 +24,16 @@ namespace CineAPI.Controllers
         {
             return new User("Uname", "MrU", "Name", "mruname@gmail.com", 1);
         }
+
+        [HttpGet("{username}")]
+        public ActionResult<User> GetUser(string username)
+        {
+            if(!ModelState.IsValid)
+            {
+                return StatusCode(400);
+            }
+
+            return _userLogic.GetUser(username);
+        }
     }
 }
