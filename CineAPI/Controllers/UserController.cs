@@ -25,6 +25,25 @@ namespace CineAPI.Controllers
             return new User("Uname", "MrU", "Name", "mruname@gmail.com", 1);
         }
 
+        [HttpPost]
+        public ActionResult CreateUser([FromBody] User user)
+        {
+            
+            if(!ModelState.IsValid)
+            {
+                return StatusCode(400);
+            }
+
+            if(_userLogic.CreateUser(user))
+            {
+                return StatusCode(201);
+            }
+            else
+            {
+                return StatusCode(400);
+            }
+        }
+
         [HttpGet("{username}")]
         public ActionResult<User> GetUser(string username)
         {
