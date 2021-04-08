@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using BusinessLogic.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Models;
+using GlobalModels;
 
 namespace CineAPI.Controllers
 {

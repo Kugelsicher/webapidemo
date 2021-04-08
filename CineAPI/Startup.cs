@@ -13,6 +13,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Repository;
 using Repository.Models;
 
 namespace CineAPI
@@ -38,6 +39,8 @@ namespace CineAPI
             );
 
             services.AddScoped<BusinessLogic.Interfaces.IUserLogic, UserLogic>();
+
+            services.AddScoped<RepoLogic>();
 
             services.AddSwaggerGen(c =>
             {
